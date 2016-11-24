@@ -1,19 +1,25 @@
+
 # vue2-bootstrap-modal
-> To show modal in a bootstrap compatible way
+> To show modal in a bootstrap compatible way, for Vue 2.x
 
 **This package doesn't require bootstrap css to run, I have compiled the css inside the module**
+
+[![NPM](https://nodei.co/npm/vue2-bootstrap-modal.png?downloads=true)](https://nodei.co/npm/vue2-bootstrap-modal/)
+
 ## Install
+
 ``` bash
     npm install vue2-bootstrap-modal --save
 ```
 
 ## Usage
+Require the component (globally or in another component)
 ```
 components: {
     'bootstrap-modal': require('vue2-bootstrap-modal')
 },
 ```
-In your template:
+Then in your template:
 ```
 <div>
 ...
@@ -31,9 +37,31 @@ In your template:
 ...
 </div>
 ```
+## Documentation
+
+Modal functions exposed through the **ref** variable
+
+### open()
+Opens the modal
+
+### close()
+Closes the modal
+
 ## Example
 
 See ```index.html``` for example use
+
+##Intended Use
+My way of using this is to write a component which use this modal component, add proper elements into slots, then call open, close and handle the elements event as needed.
+
+##To-do
+Expose configuration, like backdrop darkness value
+
+##Contributing
+Contributions are welcomed
+
+##Release History
+0.1.0 Initial release
 
 ## Build Setup
 
