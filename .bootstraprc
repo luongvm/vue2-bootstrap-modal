@@ -1,0 +1,13 @@
+bootstrapVersion: 3
+
+styleLoaders:
+  - style
+  - css
+  - sass
+
+styles:
+    mixins: true
+    modals: true
+    close: true
+    component-animations: true
+    utilities: true

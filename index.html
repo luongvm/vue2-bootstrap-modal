@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        vue2-bootstrap-modal
+    </title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="app">
+            <bootstrap-modal ref="theModal">
+                <div slot="title">
+                    Your title here
+                </div>
+                <div slot="body">
+                    Your body here
+                </div>
+                <div slot="footer">
+                    Your footer here
+                </div>
+            </bootstrap-modal>
+            <button @click="openTheModal()">Show</button>
+        </div>
+    </div>
+    <script src="./dist/example.js"></script>
+</body>
+
+</html>
