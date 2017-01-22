@@ -1,7 +1,7 @@
 import Vue from 'vue/dist/vue.js'
 
 var bootstrapModal = require('./Vue2BootstrapModal.vue')
-
+require('bootstrap-loader')
 new Vue({
     el: '#app',
     components: {

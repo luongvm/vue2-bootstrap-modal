@@ -2,7 +2,7 @@
 # vue2-bootstrap-modal
 > To show modal in a bootstrap compatible way, for Vue 2.x
 
-**This package doesn't require bootstrap css to run, I have compiled the css inside the module**
+** Updated package to exclude bootstrap css and js, you need to install bootstrap-loader**
 
 [![NPM](https://nodei.co/npm/vue2-bootstrap-modal.png?downloads=true)](https://nodei.co/npm/vue2-bootstrap-modal/)
 

@@ -40,7 +40,7 @@
 
 <script>
 
-require('bootstrap-loader')
+//require('bootstrap-loader')
 export default {
     props: [],
     data() {
