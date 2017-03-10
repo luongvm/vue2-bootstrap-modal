@@ -14,10 +14,10 @@
             <div v-if="needHeader" class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="close()"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">
-        <slot name="title">
-            Modal
-        </slot>
-    </h4>
+                <slot name="title">
+                    Modal
+                </slot>
+            </h4>
             </div>
             <div class="modal-body">
                 <slot name="body">
