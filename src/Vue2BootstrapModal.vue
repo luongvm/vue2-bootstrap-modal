@@ -11,20 +11,20 @@
 <div ref="modal" class="modal fade background-darken" tabindex="-1" role="dialog" :class="{in:isOpen,show:isShow}" @click.self="close()" @keyup.esc="close()">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <div class="modal-header">
+            <div v-if="needHeader" class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="close()"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title">
-        <slot name="title">
-            Modal
-        </slot>
-    </h4>
+                <slot name="title">
+                    Modal
+                </slot>
+            </h4>
             </div>
             <div class="modal-body">
                 <slot name="body">
                     Body
                 </slot>
             </div>
-            <div class="modal-footer">
+            <div v-if="needFooter" class="modal-footer">
                 <slot name="footer">
 
                 </slot>
@@ -42,7 +42,16 @@
 
 //require('bootstrap-loader')
 export default {
-    props: [],
+    props: {
+      needHeader: {
+        type: Boolean,
+        default: true
+      },
+      needFooter: {
+        type: Boolean,
+        default: true
+      }
+    },
     data() {
         return {
             isOpen: false,
