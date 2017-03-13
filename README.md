@@ -23,7 +23,7 @@ Then in your template:
 ```
 <div>
 ...
-<bootstrap-modal ref="theBootstrapModal">
+<bootstrap-modal ref="theBootstrapModal" :needHeader="false" :needFooter="false">
 <div slot="title">
     Your title here
 </div>
@@ -39,28 +39,40 @@ Then in your template:
 ```
 ## Documentation
 
-Modal functions exposed through the **ref** variable
+Modal functions are exposed through the **ref** variable
 
-### open()
+### open() `function`
 Opens the modal
 
-### close()
+### close() `function`
 Closes the modal
+
+### needHeader `boolean`
+True if you need to show the header
+
+Default value is `true`
+
+### needFooter `boolean`
+True if you need to show the footer
+
+Default value is `true`
 
 ## Example
 
 See ```index.html``` for example use
 
-##Intended Use
+## Intended Use
 My way of using this is to write a component which use this modal component, add proper elements into slots, then call open, close and handle the elements event as needed.
 
-##To-do
+## To-do
 Expose configuration, like backdrop darkness value
 
-##Contributing
+## Contributing
 Contributions are welcomed
 
-##Release History
+## Release History
+0.1.4 Add `needFooter` and `needHeader` props
+
 0.1.0 Initial release
 
 ## Build Setup
