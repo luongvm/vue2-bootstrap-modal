@@ -1,6 +1,6 @@
 {
   "name": "vue2-bootstrap-modal",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Vue 2 Bootstrap Component",
   "main": "dist/bootstrap-modal.js",
   "scripts": {
@@ -19,8 +19,7 @@
   ],
   "author": "Luong Vu <luongvm183@gmail.com> (https://luongvu.com)",
   "license": "MIT",
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "devDependencies": {
     "babel-core": "^6.18.2",
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
