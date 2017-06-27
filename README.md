@@ -57,6 +57,9 @@ True if you need to show the footer
 
 Default value is `true`
 
+### large-size `boolean`
+True if you need to switch size to large by using `modal-lg` class.
+
 ## Example
 
 See ```index.html``` for example use
