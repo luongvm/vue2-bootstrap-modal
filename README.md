@@ -57,8 +57,16 @@ True if you need to show the footer
 
 Default value is `true`
 
-### large-size `boolean`
-True if you need to switch size to large by using `modal-lg` class.
+### size `string`
+Resolves to following classes:
+```js
+{
+    small: "modal-sm",
+    medium: "modal-md",
+    large: "modal-lg"
+}
+```
+Default is empty string.
 
 ## Example
 
