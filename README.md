@@ -57,6 +57,17 @@ True if you need to show the footer
 
 Default value is `true`
 
+### size `string`
+Resolves to following classes:
+```js
+{
+    small: "modal-sm",
+    medium: "modal-md",
+    large: "modal-lg"
+}
+```
+Default is empty string.
+
 ## Example
 
 See ```index.html``` for example use

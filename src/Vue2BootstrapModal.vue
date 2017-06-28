@@ -9,7 +9,7 @@
 <template>
 
 <div ref="modal" class="modal fade background-darken" tabindex="-1" role="dialog" :class="{in:isOpen,show:isShow}" @click.self="close()" @keyup.esc="close()">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog" :class="modalSize" role="document">
         <div class="modal-content">
             <div v-if="needHeader" class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="close()"><span aria-hidden="true">&times;</span></button>
@@ -50,23 +50,30 @@ export default {
       needFooter: {
         type: Boolean,
         default: true
+      },
+      size: {
+          type: String,
+          default: ""
       }
     },
     data() {
         return {
+            sizeClasses: {
+                "large": "modal-lg",
+                "small": "modal-sm",
+                "medium": "modal-md"
+            },
             isOpen: false,
             isShow: false
         }
     },
     methods: {
         open() {
-
                 this.isShow = true
                 this.$nextTick(function() {
                     this.isOpen = true
                     this.$refs.modal.focus()
                 })
-
             },
             close() {
                 this.isOpen = false
@@ -76,6 +83,11 @@ export default {
                     }, 500)
                 })
             }
+    },
+    computed: {
+        modalSize: function() {
+            return this.sizeClasses[this.size] || "";
+        }
     }
 }
 
