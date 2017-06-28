@@ -47,6 +47,11 @@ Opens the modal
 ### close() `function`
 Closes the modal
 
+### size `string`
+Can be either an empty string or `large` or `small`
+
+Default value is empty string
+
 ### needHeader `boolean`
 True if you need to show the header
 
@@ -71,6 +76,8 @@ Expose configuration, like backdrop darkness value
 Contributions are welcomed
 
 ## Release History
+0.1.7 Add `size` props
+
 0.1.4 Add `needFooter` and `needHeader` props
 
 0.1.0 Initial release
