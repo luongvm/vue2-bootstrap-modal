@@ -1,8 +1,8 @@
 
 # vue2-bootstrap-modal
-> To show modal in a bootstrap compatible way, for Vue 2.x
+> Bootstrap Modal Component for Vue 2.x
 
-### Updated package to exclude bootstrap css and js, you need to install bootstrap-loader
+> Updated package to exclude bootstrap css and js, you need to install bootstrap-loader
 
 [![NPM](https://nodei.co/npm/vue2-bootstrap-modal.png?downloads=true)](https://nodei.co/npm/vue2-bootstrap-modal/)
 
@@ -23,7 +23,7 @@ Then in your template:
 ```
 <div>
 ...
-<bootstrap-modal ref="theBootstrapModal" :needHeader="false" :needFooter="false">
+<bootstrap-modal ref="theModal" :needHeader="false" :needFooter="false" size="large">
 <div slot="title">
     Your title here
 </div>
@@ -37,6 +37,7 @@ Then in your template:
 ...
 </div>
 ```
+Finally call `theModal.open()` and `theModal.close()` whenever you need.
 ## Documentation
 
 Modal functions are exposed through the **ref** variable
@@ -58,22 +59,21 @@ True if you need to show the footer
 Default value is `true`
 
 ### size `string`
-Resolves to following classes:
-```js
-{
-    small: "modal-sm",
-    medium: "modal-md",
-    large: "modal-lg"
-}
-```
-Default is empty string.
+
+Use one of these values to change the modal size
+
+Value | Bootstrap class
+--|--
+`small` | `modal-sm`
+`medium` | `modal-md`
+`large` | `modal-lg`
+
+Default value is empty
 
 ## Example
 
 See ```index.html``` for example use
 
-## Intended Use
-My way of using this is to write a component which use this modal component, add proper elements into slots, then call open, close and handle the elements event as needed.
 
 ## To-do
 Expose configuration, like backdrop darkness value
@@ -82,6 +82,8 @@ Expose configuration, like backdrop darkness value
 Contributions are welcomed
 
 ## Release History
+0.1.7 Add `size` props
+
 0.1.4 Add `needFooter` and `needHeader` props
 
 0.1.0 Initial release

@@ -1,6 +1,6 @@
 {
   "name": "vue2-bootstrap-modal",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Vue 2 Bootstrap Component",
   "main": "dist/bootstrap-modal.js",
   "scripts": {
