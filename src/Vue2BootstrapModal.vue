@@ -4,11 +4,16 @@
     background: rgba(0, 0, 0, 0.3);
 }
 
+.vue-modal-open {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
 </style>
 
 <template>
 
-<div ref="modal" class="modal fade background-darken" tabindex="-1" role="dialog" :class="{in:isOpen,show:isShow}" @click.self="close()" @keyup.esc="close()">
+<div ref="modal" class="modal fade background-darken" tabindex="-1" role="dialog" :class="{'in vue-modal-open':isOpen, show:isShow}" @click.self="close()" @keyup.esc="close()">
     <div class="modal-dialog" :class="modalSize" role="document">
         <div class="modal-content">
             <div v-if="needHeader" class="modal-header">
