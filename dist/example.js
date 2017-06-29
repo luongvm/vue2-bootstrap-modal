@@ -229,7 +229,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n.background-darken {\n    background: rgba(0, 0, 0, 0.3);\n}\n\n", ""]);
+	exports.push([module.id, "\n.background-darken[data-v-220d4c12] {\n    background: rgba(0, 0, 0, 0.3);\n}\n.modal[data-v-220d4c12]\n{\n    overflow-x: hidden;\n    overflow-y: auto;\n}\n", ""]);
 	
 	// exports
 
@@ -540,6 +540,7 @@
 	
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-220d4c12"
 	
 	module.exports = __vue_exports__
 
@@ -842,8 +843,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-220d4c12!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Vue2BootstrapModal.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-220d4c12!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Vue2BootstrapModal.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-220d4c12&scoped=true!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Vue2BootstrapModal.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-220d4c12&scoped=true!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Vue2BootstrapModal.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
