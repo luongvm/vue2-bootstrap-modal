@@ -90,7 +90,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                "medium": "modal-md"
 	            },
 	            isOpen: false,
-	            isShow: false
+	            isShow: false,
+	            lastKnownBodyStyle: { overflow: 'auto' }
 	        };
 	    },
 	
@@ -100,6 +101,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            this.$nextTick(function () {
 	                this.isOpen = true;
 	                this.$refs.modal.focus();
+	                this.lastKnownBodyStyle.overflow = document.body.style.overflow;
+	                document.body.style.overflow = "hidden";
 	            });
 	        },
 	        close: function close() {
@@ -109,6 +112,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	                setTimeout(function () {
 	                    _this.isShow = false;
+	                    document.body.style.overflow = _this.lastKnownBodyStyle.overflow;
 	                }, 500);
 	            });
 	        }
