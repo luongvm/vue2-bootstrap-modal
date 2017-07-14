@@ -68,7 +68,8 @@ export default {
                 "medium": "modal-md"
             },
             isOpen: false,
-            isShow: false
+            isShow: false,
+            lastKnownBodyStyle:{overflow:'auto'}
         }
     },
     methods: {
@@ -77,6 +78,8 @@ export default {
                 this.$nextTick(function() {
                     this.isOpen = true
                     this.$refs.modal.focus()
+                    this.lastKnownBodyStyle.overflow=  document.body.style.overflow
+                    document.body.style.overflow="hidden"
                 })
             },
             close() {
@@ -84,6 +87,7 @@ export default {
                 this.$nextTick(function() {
                     setTimeout(() => {
                         this.isShow = false
+                         document.body.style.overflow=   this.lastKnownBodyStyle.overflow
                     }, 500)
                 })
             }
