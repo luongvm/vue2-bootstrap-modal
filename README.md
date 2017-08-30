@@ -83,6 +83,9 @@ Expose configuration, like backdrop darkness value
 Contributions are welcomed
 
 ## Release History
+
+0.1.11 Add `full` value for `size` props
+
 0.1.7 Add `size` props
 
 0.1.4 Add `needFooter` and `needHeader` props

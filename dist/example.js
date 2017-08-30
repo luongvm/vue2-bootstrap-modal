@@ -132,7 +132,8 @@
 	            sizeClasses: {
 	                "large": "modal-lg",
 	                "small": "modal-sm",
-	                "medium": "modal-md"
+	                "medium": "modal-md",
+	                "full": "modal-full"
 	            },
 	            isOpen: false,
 	            isShow: false,
@@ -233,7 +234,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n.background-darken[data-v-220d4c12] {\n    background: rgba(0, 0, 0, 0.3);\n}\n.modal[data-v-220d4c12]\n{\n    overflow-x: hidden;\n    overflow-y: auto;\n}\n", ""]);
+	exports.push([module.id, "\n.background-darken[data-v-220d4c12] {\n    background: rgba(0, 0, 0, 0.3);\n}\n.modal[data-v-220d4c12]\n{\n    overflow-x: hidden;\n    overflow-y: auto;\n}\n.modal-full[data-v-220d4c12]\n{\n    margin-left: 16px;\n    margin-right:16px;\n    width:auto;\n}\n", ""]);
 	
 	// exports
 

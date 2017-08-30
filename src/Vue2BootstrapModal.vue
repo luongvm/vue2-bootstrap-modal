@@ -8,6 +8,12 @@
     overflow-x: hidden;
     overflow-y: auto;
 }
+.modal-full
+{
+    margin-left: 16px;
+    margin-right:16px;
+    width:auto;
+}
 </style>
 
 <template>

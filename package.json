@@ -1,6 +1,6 @@
 {
     "name": "vue2-bootstrap-modal",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "description": "Vue 2 Bootstrap Component",
     "main": "dist/bootstrap-modal.js",
     "scripts": {
@@ -12,10 +12,7 @@
         "url": "https://github.com/joturako/vue2-bootstrap-modal"
     },
     "keywords": [
-        "vue2",
-        "bootstrap",
-        "vue-component",
-        "vue2-bootstrap-modal"
+        "vue2", "bootstrap", "vue-component", "vue2-bootstrap-modal"
     ],
     "author": "Luong Vu <luongvm183@gmail.com> (https://luongvu.com)",
     "license": "MIT",
