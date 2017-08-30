@@ -67,6 +67,7 @@ Value | Bootstrap class
 `small` | `modal-sm`
 `medium` | `modal-md`
 `large` | `modal-lg`
+`full` | `modal-full`
 
 Default value is empty
 
