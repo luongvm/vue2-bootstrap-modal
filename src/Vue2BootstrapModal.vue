@@ -65,7 +65,8 @@ export default {
             sizeClasses: {
                 "large": "modal-lg",
                 "small": "modal-sm",
-                "medium": "modal-md"
+                "medium": "modal-md",
+                "full": "modal-full"
             },
             isOpen: false,
             isShow: false,
