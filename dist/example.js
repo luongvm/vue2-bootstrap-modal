@@ -153,7 +153,6 @@
 	
 	    methods: {
 	        open: function open() {
-	            console.log(this.needHeader);
 	            this.isShow = true;
 	            this.$nextTick(function () {
 	                this.isOpen = true;

@@ -92,7 +92,6 @@ export default {
     },
     methods: {
         open() {
-                console.log(this.needHeader)
                 this.isShow = true
                 this.$nextTick(function() {
                     this.isOpen = true
