@@ -114,6 +114,14 @@
 	});
 	exports.default = {
 	    props: {
+	        opened: {
+	            type: Function,
+	            default: function _default() {}
+	        },
+	        closed: {
+	            type: Function,
+	            default: function _default() {}
+	        },
 	        needHeader: {
 	            type: Boolean,
 	            default: true
@@ -137,18 +145,22 @@
 	            },
 	            isOpen: false,
 	            isShow: false,
-	            lastKnownBodyStyle: { overflow: 'auto' }
+	            lastKnownBodyStyle: {
+	                overflow: 'auto'
+	            }
 	        };
 	    },
 	
 	    methods: {
 	        open: function open() {
+	            console.log(this.needHeader);
 	            this.isShow = true;
 	            this.$nextTick(function () {
 	                this.isOpen = true;
 	                this.$refs.modal.focus();
 	                this.lastKnownBodyStyle.overflow = document.body.style.overflow;
 	                document.body.style.overflow = "hidden";
+	                this.opened();
 	            });
 	        },
 	        close: function close() {
@@ -159,6 +171,7 @@
 	                setTimeout(function () {
 	                    _this.isShow = false;
 	                    document.body.style.overflow = _this.lastKnownBodyStyle.overflow;
+	                    _this.closed();
 	                }, 500);
 	            });
 	        }
@@ -192,8 +205,12 @@
 	    methods: {
 	        openTheModal: function openTheModal() {
 	            this.$refs.theModal.open();
+	        },
+	        myOpenFunc: function myOpenFunc() {
+	            console.log('hello');
 	        }
 	    },
+	
 	    mounted: function mounted() {}
 	});
 
@@ -234,7 +251,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n.background-darken[data-v-220d4c12] {\n    background: rgba(0, 0, 0, 0.3);\n}\n.modal[data-v-220d4c12]\n{\n    overflow-x: hidden;\n    overflow-y: auto;\n}\n.modal-full[data-v-220d4c12]\n{\n    margin-left: 16px;\n    margin-right:16px;\n    width:auto;\n}\n", ""]);
+	exports.push([module.id, "\n.background-darken[data-v-220d4c12] {\n    background: rgba(0, 0, 0, 0.3);\n}\n.modal[data-v-220d4c12] {\n    overflow-x: hidden;\n    overflow-y: auto;\n}\n.modal-full[data-v-220d4c12] {\n    margin-left: 16px;\n    margin-right: 16px;\n    width: auto;\n}\n\n", ""]);
 	
 	// exports
 

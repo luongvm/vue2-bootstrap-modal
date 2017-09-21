@@ -23,7 +23,7 @@ Then in your template:
 ```
 <div>
 ...
-<bootstrap-modal ref="theModal" :needHeader="false" :needFooter="false" size="large">
+<bootstrap-modal ref="theModal" :need-header="false" :need-footer="false" :size="large" :opened="myOpenFunc">
 <div slot="title">
     Your title here
 </div>
@@ -40,7 +40,7 @@ Then in your template:
 Finally call `theModal.open()` and `theModal.close()` whenever you need.
 ## Documentation
 
-Modal functions are exposed through the **ref** variable
+Modal functions and callbacks are exposed through the **ref** variable
 
 ### open() `function`
 Opens the modal
@@ -48,12 +48,18 @@ Opens the modal
 ### close() `function`
 Closes the modal
 
-### needHeader `boolean`
+### opened `callback`
+Called after modal is opened. Pass your own method to be called
+
+### closed `callback`
+Called after modal is closed. Pass your own method to be called
+
+### need-header `boolean`
 True if you need to show the header
 
 Default value is `true`
 
-### needFooter `boolean`
+### need-footer `boolean`
 True if you need to show the footer
 
 Default value is `true`
@@ -83,6 +89,8 @@ Expose configuration, like backdrop darkness value
 Contributions are welcomed
 
 ## Release History
+
+0.1.12 Add `opened` and `closed` event callbacks, correct examples
 
 0.1.11 Add `full` value for `size` props
 

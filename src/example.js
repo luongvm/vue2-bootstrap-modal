@@ -7,12 +7,14 @@ new Vue({
     components: {
         'bootstrap-modal': bootstrapModal
     },
-    methods:{
-        openTheModal(){
+    methods: {
+        openTheModal() {
             this.$refs.theModal.open()
-        }
+        },
+        myOpenFunc() {
+            console.log('hello')
+        },
     },
-    mounted(){
-    
-    }
+
+    mounted() {}
 });

@@ -3,17 +3,18 @@
 .background-darken {
     background: rgba(0, 0, 0, 0.3);
 }
-.modal
-{
+
+.modal {
     overflow-x: hidden;
     overflow-y: auto;
 }
-.modal-full
-{
+
+.modal-full {
     margin-left: 16px;
-    margin-right:16px;
-    width:auto;
+    margin-right: 16px;
+    width: auto;
 }
+
 </style>
 
 <template>
@@ -53,18 +54,26 @@
 //require('bootstrap-loader')
 export default {
     props: {
-      needHeader: {
-        type: Boolean,
-        default: true
-      },
-      needFooter: {
-        type: Boolean,
-        default: true
-      },
-      size: {
-          type: String,
-          default: ""
-      }
+        opened: {
+            type: Function,
+            default: () => {}
+        },
+        closed: {
+            type: Function,
+            default: () => {}
+        },
+        needHeader: {
+            type: Boolean,
+            default: true
+        },
+        needFooter: {
+            type: Boolean,
+            default: true
+        },
+        size: {
+            type: String,
+            default: ""
+        },
     },
     data() {
         return {
@@ -76,27 +85,35 @@ export default {
             },
             isOpen: false,
             isShow: false,
-            lastKnownBodyStyle:{overflow:'auto'}
+            lastKnownBodyStyle: {
+                overflow: 'auto'
+            }
         }
     },
     methods: {
         open() {
+                console.log(this.needHeader)
                 this.isShow = true
                 this.$nextTick(function() {
                     this.isOpen = true
                     this.$refs.modal.focus()
-                    this.lastKnownBodyStyle.overflow=  document.body.style.overflow
-                    document.body.style.overflow="hidden"
+                    this.lastKnownBodyStyle.overflow = document.body.style.overflow
+                    document.body.style.overflow = "hidden"
+                    this.opened();
                 })
+
             },
             close() {
                 this.isOpen = false
                 this.$nextTick(function() {
                     setTimeout(() => {
                         this.isShow = false
-                         document.body.style.overflow=   this.lastKnownBodyStyle.overflow
+                        document.body.style.overflow = this.lastKnownBodyStyle.overflow
+                        this.closed();
                     }, 500)
+
                 })
+
             }
     },
     computed: {
