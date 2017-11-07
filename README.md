@@ -23,7 +23,7 @@ Then in your template:
 ```
 <div>
 ...
-<bootstrap-modal ref="theModal" :need-header="false" :need-footer="false" :size="large" :opened="myOpenFunc">
+<bootstrap-modal ref="theModal" :need-header="false" :need-footer="false" :size="'large'" :opened="myOpenFunc">
 <div slot="title">
     Your title here
 </div>
