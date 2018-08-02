@@ -62,79 +62,84 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 1 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	exports.default = {
-	    props: {
-	        opened: {
-	            type: Function,
-	            default: function _default() {}
-	        },
-	        closed: {
-	            type: Function,
-	            default: function _default() {}
-	        },
-	        needHeader: {
-	            type: Boolean,
-	            default: true
-	        },
-	        needFooter: {
-	            type: Boolean,
-	            default: true
-	        },
-	        size: {
-	            type: String,
-	            default: ""
-	        }
+	  props: {
+	    opened: {
+	      type: Function,
+	      default: function _default() {}
 	    },
-	    data: function data() {
-	        return {
-	            sizeClasses: {
-	                "large": "modal-lg",
-	                "small": "modal-sm",
-	                "medium": "modal-md",
-	                "full": "modal-full"
-	            },
-	            isOpen: false,
-	            isShow: false,
-	            lastKnownBodyStyle: {
-	                overflow: 'auto'
-	            }
-	        };
+	    closed: {
+	      type: Function,
+	      default: function _default() {}
 	    },
-	
-	    methods: {
-	        open: function open() {
-	            this.isShow = true;
-	            this.$nextTick(function () {
-	                this.isOpen = true;
-	                this.$refs.modal.focus();
-	                this.lastKnownBodyStyle.overflow = document.body.style.overflow;
-	                document.body.style.overflow = "hidden";
-	                this.opened();
-	            });
-	        },
-	        close: function close() {
-	            this.isOpen = false;
-	            this.$nextTick(function () {
-	                var _this = this;
-	
-	                setTimeout(function () {
-	                    _this.isShow = false;
-	                    document.body.style.overflow = _this.lastKnownBodyStyle.overflow;
-	                    _this.closed();
-	                }, 500);
-	            });
-	        }
+	    needHeader: {
+	      type: Boolean,
+	      default: true
 	    },
-	    computed: {
-	        modalSize: function modalSize() {
-	            return this.sizeClasses[this.size] || "";
-	        }
+	    needFooter: {
+	      type: Boolean,
+	      default: true
+	    },
+	    size: {
+	      type: String,
+	      default: ''
 	    }
+	  },
+	  data: function data() {
+	    return {
+	      sizeClasses: {
+	        large: 'modal-lg',
+	        small: 'modal-sm',
+	        medium: 'modal-md',
+	        full: 'modal-full'
+	      },
+	      isOpen: false,
+	      isShow: false,
+	      lastKnownBodyStyle: {
+	        overflow: 'auto'
+	      }
+	    };
+	  },
+	
+	  methods: {
+	    open: function open() {
+	      var _this = this;
+	
+	      if (this.isShow) {
+	        return;
+	      }
+	      this.isShow = true;
+	      this.$nextTick(function () {
+	        _this.isOpen = true;
+	        _this.$refs.modal.focus();
+	        _this.lastKnownBodyStyle.overflow = document.body.style.overflow;
+	        document.body.style.overflow = 'hidden';
+	        _this.opened();
+	      });
+	    },
+	    close: function close() {
+	      var _this2 = this;
+	
+	      this.isOpen = false;
+	      this.$nextTick(function () {
+	        setTimeout(function () {
+	          _this2.isShow = false;
+	          document.body.style.overflow = _this2.lastKnownBodyStyle.overflow;
+	          _this2.closed();
+	        }, 500);
+	      });
+	    }
+	  },
+	  computed: {
+	    modalSize: function modalSize() {
+	      return this.sizeClasses[this.size] || '';
+	    }
+	  }
 	};
 
 /***/ },
@@ -146,7 +151,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\n.background-darken[data-v-220d4c12] {\n    background: rgba(0, 0, 0, 0.3);\n}\n.modal[data-v-220d4c12] {\n    overflow-x: hidden;\n    overflow-y: auto;\n}\n.modal-full[data-v-220d4c12] {\n    margin-left: 16px;\n    margin-right: 16px;\n    width: auto;\n}\n\n", ""]);
+	exports.push([module.id, "\n.background-darken[data-v-220d4c12] {\n  background: rgba(0, 0, 0, 0.3);\n}\n.modal[data-v-220d4c12] {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.modal-full[data-v-220d4c12] {\n  margin-left: 16px;\n  margin-right: 16px;\n  width: auto;\n}\n", ""]);
 	
 	// exports
 
@@ -293,7 +298,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }, [_vm._v("×")])]), _vm._v(" "), _c('h4', {
 	    staticClass: "modal-title"
-	  }, [_vm._t("title", [_vm._v("\n                    Modal\n                ")])], 2)]) : _vm._e(), _vm._v(" "), _c('div', {
+	  }, [_vm._t("title", [_vm._v("\n                        Modal\n                    ")])], 2)]) : _vm._e(), _vm._v(" "), _c('div', {
 	    staticClass: "modal-body"
 	  }, [_vm._t("body", [_vm._v("\n                    Body\n                ")])], 2), _vm._v(" "), (_vm.needFooter) ? _c('div', {
 	    staticClass: "modal-footer"
