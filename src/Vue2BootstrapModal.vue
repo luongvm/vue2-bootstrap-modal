@@ -92,6 +92,7 @@ export default {
     },
     methods: {
         open() {
+                if (this.isShow) return
                 this.isShow = true
                 this.$nextTick(function() {
                     this.isOpen = true
