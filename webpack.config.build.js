@@ -1,12 +1,15 @@
-var webpack = require('webpack');
+const config = require('./webpack.config.js');
 
-module.exports = require('./webpack.config.js');
-
-
-
-module.exports.entry = {
-    'bootstrap-modal': './src/main.js',
-}
-
-module.exports.output.library = 'Vue2BootstrapModal';
-module.exports.output.libraryTarget = 'umd';
+module.exports = {
+    ...config,
+    entry: {
+        'bootstrap-modal': './src/main.js',
+    },
+    output: {
+        ...config.output,
+        library: 'Vue2BootstrapModal',
+        libraryTarget: 'umd',
+        globalObject: 'this'
+    },
+    devtool: 'source-map'
+};

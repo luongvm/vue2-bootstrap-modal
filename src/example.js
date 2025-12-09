@@ -1,7 +1,6 @@
 import Vue from 'vue/dist/vue.js'
+import bootstrapModal from './Vue2BootstrapModal.vue'
 
-var bootstrapModal = require('./Vue2BootstrapModal.vue')
-require('bootstrap-loader')
 new Vue({
     el: '#app',
     components: {
@@ -16,5 +15,5 @@ new Vue({
         },
     },
 
-    mounted() {}
+    mounted() { }
 });

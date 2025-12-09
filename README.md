@@ -86,9 +86,13 @@ See ```index.html``` for example use
 Expose configuration, like backdrop darkness value
 
 ## Contributing
-Contributions are welcomed
+Contributions are welcome!
 
 ## Release History
+
+0.2.0 Updated After Vue2 EOL, fix CVEs, and simplify the repo
+
+0.1.15 Last old version
 
 0.1.12 Add `opened` and `closed` event callbacks, correct examples
 
