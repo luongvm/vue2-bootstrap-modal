@@ -33,7 +33,18 @@
         "webpack-cli": "^7.0.1",
         "webpack-dev-server": "^5.2.3"
     },
+    "overrides": {
+        "postcss": "^8.5.10",
+        "path-to-regexp": "^0.1.13",
+        "picomatch": "^2.3.2",
+        "follow-redirects": "^1.15.12",
+        "ajv": "^8.18.0"
+    },
     "resolutions": {
-        "postcss": "^8.4.47"
+        "postcss": "^8.5.10",
+        "path-to-regexp": "^0.1.13",
+        "picomatch": "^2.3.2",
+        "follow-redirects": "^1.15.12",
+        "ajv": "^8.18.0"
     }
 }
