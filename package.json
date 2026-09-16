@@ -19,10 +19,9 @@
     ],
     "author": "Luong Vu <luongvm183@gmail.com> (https://luongvu.com)",
     "license": "MIT",
-    "peerDependencies": {},
     "devDependencies": {
-        "@babel/core": "^7.29.0",
-        "@babel/preset-env": "^7.29.2",
+        "@babel/core": "^7.29.7",
+        "@babel/preset-env": "^7.29.7",
         "babel-loader": "^10.1.1",
         "css-loader": "^7.1.4",
         "style-loader": "^4.0.0",
